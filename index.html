@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Madrid Fan Club</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #1D3D8C;
+            color: white;
+        }
+
+        header {
+            background-color: #FFFFFF;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .logo {
+            width: 200px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .registration-form {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: #FFD700;
+            color: #1D3D8C;
+            padding: 10px 30px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 10px;
+            border: 2px solid white;
+        }
+
+        h1, h2 {
+            margin: 20px 0;
+            text-align: center;
+            padding: 50px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        @media (max-width: 768px) {
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to the Official Real Madrid Fan Club</h1>
+    <header>
+        <img src="https://upload.wikimedia.org/wikipedia/en/5/56/Real_Madrid_CF.svg" alt="Real Madrid Logo" class="logo">
+    </header>
+
+    <div class="container">
+        <h2>Join Our Fan Club</h2>
+        <div class="registration-form">
+            <form id="fanForm">
+                <div class="form-group">
+                    <label>Full Name:</label>
+                    <input type="text" name="fullName" required>
+                </div>
+                
+                <div class="form-group">
+                    <label>Phone Number:</label>
+                    <input type="tel" name="phoneNumber" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Email:</label>
+                    <input type="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Favorite Player:</label>
+                    <select name="favoritePlayer" required>
+                        <option value="">Choose Player</option>
+                        <option>Jude Bellingham</option>
+                        <option>Vinicius Junior</option>
+                        <option>Thibaut Courtois</option>
+                        <option>Toni Kroos</option>
+                        <option>Luka Modric</option>
+                        <option>Other</option>
+                    </select>
+                </div>
+
+                <button type="submit">Join Now</button>
+            </form>
+        </div>
+
+        <h2>Galacticos Gallery</h2>
+        <div class="gallery">
+            <!-- Add your Real Madrid images here or use URLs for testing -->
+            <img src="https://example.com/stadium.jpg" alt="Santiago Bernabeu">
+            <img src="https://example.com/team.jpg" alt="Real Madrid Squad">
+            <img src="https://example.com/trophy.jpg" alt="Champions League Trophy">
+            <img src="https://example.com/legends.jpg" alt="Real Madrid Legends">
+            <img src="https://example.com/training.jpg" alt="Team Training">
+            <img src="https://example.com/fans.jpg" alt="Madridista Fans">
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('fanForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for joining Los Blancos family! ¡Hala Madrid!');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
