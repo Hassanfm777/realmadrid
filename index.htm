@@ -87,6 +87,14 @@
             color: #333;
         }
 
+        .history-img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-top: 30px;
+        }
+
         @media (max-width: 768px) {
             .gallery {
                 grid-template-columns: 1fr;
@@ -103,25 +111,25 @@
     <div class="container">
         <h2>Join Our Fan Club</h2>
         <div class="registration-form">
-            <form id="fanForm">
+            <form action="https://docs.google.com/forms/d/e/1FAIpQLScajVtjhsQm47_-lCxE_9WZpCSXn105kpHCe6sgjq3rpRkxkg/viewform?usp=dialog" method="POST">
                 <div class="form-group">
                     <label>Full Name:</label>
-                    <input type="text" name="fullName" required>
+                    <input type="text" name="fullName">
                 </div>
                 
                 <div class="form-group">
                     <label>Phone Number:</label>
-                    <input type="tel" name="phoneNumber" required>
+                    <input type="tel" name="phoneNumber">
                 </div>
 
                 <div class="form-group">
                     <label>Email:</label>
-                    <input type="email" name="email" required>
+                    <input type="email" name="email">
                 </div>
 
                 <div class="form-group">
                     <label>Favorite Player:</label>
-                    <select name="favoritePlayer" required>
+                    <select name="favoritePlayer">
                         <option value="">Choose Player</option>
                         <option>Jude Bellingham</option>
                         <option>Vinicius Junior</option>
@@ -138,14 +146,16 @@
 
         <h2>Galacticos Gallery</h2>
         <div class="gallery">
-            <!-- Add your Real Madrid images here or use URLs for testing -->
-            <img src="https://example.com/stadium.jpg" alt="Santiago Bernabeu">
+            <!-- Updated image for Real Madrid history -->
+            <img class="history-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Real_Madrid_1902.svg/1200px-Real_Madrid_1902.svg.png" alt="Real Madrid History">
             <img src="https://example.com/team.jpg" alt="Real Madrid Squad">
             <img src="https://example.com/trophy.jpg" alt="Champions League Trophy">
             <img src="https://example.com/legends.jpg" alt="Real Madrid Legends">
             <img src="https://example.com/training.jpg" alt="Team Training">
             <img src="https://example.com/fans.jpg" alt="Madridista Fans">
         </div>
+
+        <p style="text-align: center; margin-top: 30px;">Created by Hassan Mansour</p>
     </div>
 
     <script>
